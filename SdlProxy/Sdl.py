@@ -3,6 +3,15 @@ from transport import SdlPsm, WiFiTransport
 from session import SdlSession
 
 
+# ------------------------------------------------------------
+# "THE BEERWARE LICENSE" (Revision 42):
+# <author> wrote this code. As long as you retain this
+# notice, you can do whatever you want with this stuff. If we
+# meet someday, and you think this stuff is worth it, you can
+# buy me a beer in return.
+# ------------------------------------------------------------
+
+
 class Sdl:
 
     # Create transport, create session
