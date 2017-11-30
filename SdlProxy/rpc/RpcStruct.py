@@ -48,7 +48,7 @@ class RpcStruct:
         print(self.json_object)
         buffer = bytearray()
 
-        buffer.append(((self.function_id.function_id & 0x0F000000) >> 24) + self.rpc_type)
+        buffer.append(((self.function_id.function_id & 0x0F000000) >> 24) + (self.rpc_type << 4))
         buffer.append(((self.function_id.function_id & 0x00FF0000) >> 16))
         buffer.append(((self.function_id.function_id & 0x0000FF00) >> 8))
         buffer.append((self.function_id.function_id & 0x000000FF))
