@@ -44,7 +44,7 @@ class Sdl:
     session = SdlSession.SdlSession()
     print(" ***** Attempting to create TCP connection ***** ")
     tcp = WiFiTransport.TCP()
-    tcp.init('m.sdl.tools', 5420, session.handle_packet)
+    tcp.init('m.sdl.tools', 5316, session.handle_packet)
     tcp.connect()
     print(" ***** Connected *****")
     session.init(tcp.write)

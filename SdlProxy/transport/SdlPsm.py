@@ -123,7 +123,7 @@ class SdlPsm:
         elif state == self.DATA_SIZE_4_STATE:
             self.dataLength += raw_byte & 0xFF
             if self.frameType == SdlPacket.SdlPacket.FRAME_TYPE_SINGLE or self.frameType == SdlPacket.SdlPacket.FRAME_TYPE_CONSECUTIVE:
-                SdlPsm.pseudo_break(self)
+                SdlPsm.pseudo_break()
             elif self.frameType == SdlPacket.SdlPacket.FRAME_TYPE_CONTROL:
                 # Ok, well here's some interesting bit of knowledge.
                 # Because the start session request is from the phone with no knowledge of version it sends out a

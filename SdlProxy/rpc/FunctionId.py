@@ -1,5 +1,7 @@
 class FunctionId:
-    # REGISTER_APP_INTERFACE = FunctionId(1, "RegisterAppInterface")
+
+    function_id = 0
+    name = None
 
     def __init__(self, function_id, name):
         self.function_id = function_id

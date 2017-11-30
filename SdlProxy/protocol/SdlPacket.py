@@ -62,7 +62,7 @@ class SdlPacket:
         packet.serviceType = service_type
         packet.frameInfo = control_frame_info
         packet.sessionId = session_id
-        packet.dataLength = data_length
+        packet.dataSize = data_length
         packet.messageId = message_id
         packet.payload = payload
         return packet
