@@ -169,7 +169,10 @@ class SdlPsm:
             if self.dataLength == 0:
                 return self.FINISHED_STATE; # We are done if we don't have any payload
             # TODO We might need a try/catch or w/e the hell it is in python for OOM
-            self.payload = bytearray(self.dataLength)
+            try:
+                self.payload = bytearray(self.dataLength)
+            except Exception:
+                return self.ERROR_STATE
             self.dumpSize = self.dataLength
             return self.DATA_PUMP_STATE
         elif state == self.DATA_PUMP_STATE:
